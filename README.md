@@ -1,7 +1,5 @@
 # VGA-Monitor-Simulation
 The project aims to design and implement a VGA display simulation system using hardware description languages (VHDL and SystemVerilog) integrated with a C++ environment. Instead of relying on a physical VGA connector and monitor, this project replaces the hardware interface with software-driven simulation, enabling images to be displayed directly on a computer screen. VHDL is simulated with GHDL and connected through VHPI, while SystemVerilog is simulated with Verilator using DPI, with both approaches interfacing to a C++ program that renders the display using the SDL2 library.
-<vid width="1430" height="714" alt="video" src="https://github.com/user-attachments/assets/6cd69eb3-f9c9-41e9-98ab-4183e9248dc1" />
-
 
 to run the vhdl part use:
 
