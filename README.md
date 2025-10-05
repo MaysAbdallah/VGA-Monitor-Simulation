@@ -13,7 +13,10 @@ to stop the image display on the screen press Q
 
 # 1.to use verilator /dpi and vhpi you need to install:
 sudo apt update 
+
 sudo apt install build-essential
+
+## For using SDL2:
 sudo apt install verilator libsdl2-dev
 
 ## for python : 
