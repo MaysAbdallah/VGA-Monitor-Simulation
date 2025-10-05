@@ -1,6 +1,6 @@
 # VGA-Monitor-Simulation
 to run the vhdl part use:
-'python3 build.py name_of_the_test.vhdl'
+python3 build.py name_of_the_test.vhdl
 
 to run the system verilog part use:
 make -f Makefile USER_MODULE=test_name
