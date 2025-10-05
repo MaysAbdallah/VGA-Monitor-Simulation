@@ -65,14 +65,16 @@ def run(cmd):
     if result.returncode != 0:
         print("\033[91m Command failed.\033[0m")
         sys.exit(1)
-##to find the location of ghdl we used find /usr -type d -name ghdl 2>/dev/null , this action takes few seconds
+
 def build_cpp():
-    ghdl_location = subprocess.check_output(
-            "find /usr -type d -name ghdl 2>/dev/null | head -n 1",
-            shell=True, text=True
-        )
-    
-    run(f"g++ -Wall -fPIC -c VGA_Monitor_VHDL.cpp -o main_vhdl.o `sdl2-config --cflags --libs` -I{ghdl_location}")
+    ghdl_bin_path = subprocess.check_output(
+        "which ghdl", shell=True, text=True
+    ).strip()
+    ghdl_include_path = ghdl_bin_path.replace("/bin/ghdl", "/include/ghdl")
+    print(f"Using GHDL include path: {ghdl_include_path}")
+    run(f"g++ -Wall -fPIC -c VGA_Monitor_VHDL.cpp -o main_vhdl.o `sdl2-config --cflags --libs` -I{ghdl_include_path}")
+
+
 
 def analyze(sources):
     for src in sources:
