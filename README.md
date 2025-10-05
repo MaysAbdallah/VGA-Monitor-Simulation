@@ -16,11 +16,11 @@ sudo apt update
 sudo apt install build-essential
 sudo apt install verilator libsdl2-dev
 
-for python : 
+## for python : 
 python :sudo apt install python3
 
 
-for using GHDL :
+## for using GHDL :
 GHDL version :GHDL 6.0.0-dev (5.1.1.r10.g282f20413) [Dunoon edition]
 (used this to install this version) 
 # 2. Install required dependencies
