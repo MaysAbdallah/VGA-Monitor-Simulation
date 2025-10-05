@@ -36,12 +36,7 @@ cd ghdl
 make -j$(nproc)
 sudo make install
 
-Note :
-In case a user wants to reduce the running time of the VHDL part ,he/she can run the next command in terminal :
-find /usr -type d -name ghdl 2>/dev/null 
-and remove the next line in build_cpp() in build.py :
-ghdl_location = subprocess.check_output(
-            "find /usr -type d -name ghdl 2>/dev/null | head -n 1",
+
             shell=True, text=True
         ) 
 and use this command :
