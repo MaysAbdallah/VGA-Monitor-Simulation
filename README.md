@@ -1,9 +1,11 @@
 # VGA-Monitor-Simulation
-to run the vhdl part use:
-python3 build.py name_of_the_test.vhdl
+The project aims to design and implement a VGA display simulation system using hardware description languages (VHDL and SystemVerilog) integrated with a C++ environment. Instead of relying on a physical VGA connector and monitor, this project replaces the hardware interface with software-driven simulation, enabling images to be displayed directly on a computer screen. VHDL is simulated with GHDL and connected through VHPI, while SystemVerilog is simulated with Verilator using DPI, with both approaches interfacing to a C++ program that renders the display using the SDL2 library.
+
+  to run the vhdl part use:
+  python3 build.py name_of_the_test.vhdl
 
 to run the system verilog part use:
-make -f Makefile USER_MODULE=test_name
+  make -f Makefile USER_MODULE=test_name
 
 to stop the image display on the screen press Q
 
