@@ -35,11 +35,3 @@ cd ghdl
 # 4. Build and install
 make -j$(nproc)
 sudo make install
-
-
-            shell=True, text=True
-        ) 
-and use this command :
- run(f"g++ -Wall -fPIC -c VGA_Monitor_VHDL.cpp -o main_vhdl.o `sdl2-config --cflags --libs` -I{ghdl_location}")
-instead of {ghdl_location} put the output that he/she got when running the previous command in terminal.
-e.g.  run(f"g++ -Wall -fPIC -c VGA_Monitor_VHDL.cpp -o main_vhdl.o `sdl2-config --cflags --libs` -I/usr/local/include/ghdl") 
